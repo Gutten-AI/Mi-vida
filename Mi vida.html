@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Vida</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: Arial, sans-serif;
+      color: #d6336c;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #a4006d;
+    }
+    .container {
+      font-size: 24px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #d6336c; /* Cursor effect */
+      animation: typing 20s steps(300, end), blink 0.5s step-end infinite alternate;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blink {
+      from {
+        border-color: transparent;
+      }
+      to {
+        border-color: #d6336c;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi Vida</h1>
+  <div class="container">
+    <!-- JavaScript will populate this -->
+  </div>
+  <script>
+    const container = document.querySelector('.container');
+    const sentence = 'I love you babe ♥️🌹 ';
+    let text = '';
+
+    for (let i = 1; i <= 100; i++) {
+      text += sentence;
+      if (i % 3 === 0) {
+        text += '<br>'; // Add a line break after every 3 sentences
+      }
+    }
+
+    container.innerHTML = text; // Use innerHTML to include <br> tags
+  </script>
+</body>
+</html>
